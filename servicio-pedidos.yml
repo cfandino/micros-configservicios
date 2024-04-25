@@ -1,0 +1,24 @@
+spring:
+  jpa:
+    hibernate:
+      naming.implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+      naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pedidos?serverTimezone=UTC
+    username: root
+    password: root
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}[${random.value}]
+
+server:
+  port: 7000
+
+servicio-productos:
+  username: admin
+  password: admin
