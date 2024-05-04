@@ -1,0 +1,17 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}[${random.value}]
+    
+server:
+  port: 7000
+  
+springdoc:
+  packages-to-scan: com.curso.ctic.controller
+  paths-to-match: /**
+    
+app_cursos:
+  pass: user4
+  user: user4
